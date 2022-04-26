@@ -2,13 +2,17 @@
 
 
 function division(number, dividedBy){
-    if(number===dividedBy){
-        return 1
-    }
-    else {
-        return number-division(number-1,dividedBy)
+let sign = ((number < 0) ^ (dividedBy < 0)) ? -1 : 1;
+ number = Math.abs(number);
+divisor = Math.abs(dividedBy);
+let quotient = 0;
+while (number >= dividedBy) {
+    number -= dividedBy;
+    ++quotient;}
+if(sign==-1) quotient=-quotient;
+return quotient;
 
-    }
+
 }
 
 
